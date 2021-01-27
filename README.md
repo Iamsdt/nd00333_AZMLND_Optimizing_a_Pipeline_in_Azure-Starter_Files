@@ -124,8 +124,6 @@ compute_target.delete()
 
 Proof:
 
-1. ![image-20210127153849810](/home/shudipto/.config/Typora/typora-user-images/image-20210127153849810.png)
-2. 
-
-![](README.assets/Screenshot from 2021-01-27 14-25-27.png)
+1. <img src='./img/delete.png'>
+2. <img src='./img/cluster_delete.png'>
 
