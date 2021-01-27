@@ -33,6 +33,7 @@ def clean_data(data):
     x_df["loan"] = x_df.loan.apply(lambda s: 1 if s == "yes" else 0)
     contact = pd.get_dummies(x_df.contact, prefix="contact")
     x_df.drop("contact", inplace=True, axis=1)
+    
     x_df = x_df.join(contact)
     education = pd.get_dummies(x_df.education, prefix="education")
     x_df.drop("education", inplace=True, axis=1)
@@ -42,7 +43,8 @@ def clean_data(data):
     x_df["poutcome"] = x_df.poutcome.apply(lambda s: 1 if s == "success" else 0)
 
     y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
-    
+
+    return x_df, y_df
 
 # clean datasets
 x, y = clean_data(ds)
