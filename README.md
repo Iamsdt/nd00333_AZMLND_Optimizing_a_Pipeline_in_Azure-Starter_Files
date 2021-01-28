@@ -115,6 +115,30 @@ In **AutoML**, I used following parameters
 
 
 
+here is the code
+
+```
+automl_config = AutoMLConfig(
+    experiment_timeout_minutes=15,
+    task='classification',
+    primary_metric='accuracy',
+    training_data=df,
+    label_column_name='y',
+    n_cross_validations=2)
+```
+
+Here, 
+
+**experiment_timeout_minutes** = 15, we wan to run this experiments for **15 minutes**
+
+**task** = classification, our main to classify user, so we choose **classification**
+
+**primary_metric**= accuracy, the best model will be chosen based on **accuracy**
+
+**n_cross_validations** = 2, we want 2 cross validations to perform.
+
+
+
 ### Outputs:
 
 Here are some from different models -
@@ -125,6 +149,8 @@ Here are some from different models -
 | 2.   | LightGBM            | 91.29 %  |
 | 3.   | Logistic Regression | 90.83 %  |
 | 4.   | RandomForest        | 89.13 %  |
+
+
 
 #### Best Model:
 
